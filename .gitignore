@@ -3,7 +3,12 @@
 ### Example user template
 
 # IntelliJ project files
-.idea
+.DS_Store
+.ides/*
+/wordpress/wp-config.php
+/wordpress/wp-content/uploads/
+.htaccess
+
 *.iml
 out
 gen
