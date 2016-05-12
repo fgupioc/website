@@ -312,7 +312,7 @@ $(document).ready(function () {
                                $('.oculto').show('slow');
                                $(".message").removeClass("success-ok");
                                $('.message').addClass('success-error');
-                               $('.message').html('<span>Su correo no exixte o falta completar sus datos </span>');
+                               $('.message').html('<span>Su correo no existe o falta completar sus datos </span>');
                                $(".message").slideDown('slow', function () {
                                    setTimeout(function () {
                                        $(".message").slideUp('slow');

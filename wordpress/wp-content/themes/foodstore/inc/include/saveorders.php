@@ -18,7 +18,7 @@ function guardarorders()
                 $res['value'] = 'existe';
             } else {
                 $res['status'] = 200;
-                $res['datos'] = 'datos-completos';
+                $res['datos'] = 'datos-completos';            
             }
         } else {
             $res['status'] = 500;
