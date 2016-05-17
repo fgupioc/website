@@ -259,7 +259,6 @@ $(document).ready(function () {
                 telefonoorder: {
                     required: true
                 }
-
             },
             messages: {
                 correoorder: {
@@ -293,14 +292,13 @@ $(document).ready(function () {
                         url: form.data('url'),
                         data: stringdata,
                         error: function (data) {
-                            console.log(data);
+                            btn.attr('disabled', true);
                         },
                         beforeSend: function () {
                             btn.prop('disabled', true);
                             btn.html('<i class="fa fa-spinner fa-pulse"></i>  Enviando...');
                         },
-                        success: function (data) {
-                            console.log(data);
+                        success: function (data) { 
                             if (data.status == 200) {
                                 btn.attr('disabled', true);
                                 mess.removeClass("success-error");
@@ -311,7 +309,7 @@ $(document).ready(function () {
                                     setTimeout(function () {
                                         mess.slideUp('slow');
                                     }, 3000);
-                                });
+                                }); 
                             }
                             else {
                                 ocu.show('slow');
@@ -338,7 +336,7 @@ $(document).ready(function () {
                         url: form.data('url'),
                         data: stringdata,
                         error: function (data) {
-                            console.log(data);
+                            btn.attr('disabled', true);
                         },
                         beforeSend: function () {
                             btn.prop('disabled', true);
@@ -373,10 +371,9 @@ $(document).ready(function () {
                     });
                 }
             }
-
         });
-
-    });//fin pedidos
+    });
+    //fin pedidos
 
 });//fin del document
 

@@ -19,6 +19,9 @@
                         <label for="email">Email :</label>
                         <input type="email" class="form-control" id="correoorder" name="correoorder">
                     </div>
+                    <div class="hidden">
+                    <input class="form-control" id="nom-producto" name="nom-producto" value="<?php the_title(); ?>">
+                    </div>
                     <div  class="oculto">
                         <div class="form-group">
                             <label for="email">Nombre :</label>
@@ -38,7 +41,7 @@
                     <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
                     <button type="submit" id="btn-pedido" class="btn btn-primary">Enviar</button>
                 </div>
-            </form>
+            </form>  
         </div>
     </div>
 </div>
