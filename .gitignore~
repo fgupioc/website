@@ -5,12 +5,16 @@
 ### Example user template
 
 # IntelliJ project files
-
+<<<<<<< HEAD
 .idea/*
+=======
 .DS_Store
+.ides/*
 /wordpress/wp-config.php
 /wordpress/wp-content/uploads/
 .htaccess
+
+>>>>>>> d6de9af030e61ed11467155de711f8ae6d3eadc7
 *.iml
 out
 gen
