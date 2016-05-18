@@ -36,9 +36,9 @@ function guardarorders()
                 $res['status'] = 200;
                 $res['datos'] = 'datos-completos';
 
-                //wp_mail($to, $subject, $message, $headers);
+                wp_mail($to, $subject, $message, $headers);
                 //enviar msn al cliente
-                //wp_mail($_POST['correoorder']," Sr(a). ". $nombre . " Se contacto con FOODSTORE", "Muchas gracias por confiar en nosotros, su pedido de ".trim($_POST['nom-producto'])." esta siendo procesado. En breve nos estaremos contactando con usted via telefono...", "De: " . $to . " <" . $to . ">\r\n", "FOODSTORE");
+                wp_mail($_POST['correoorder']," Sr(a). ". $nombre . " Se contacto con FOODSTORE", "Muchas gracias por confiar en nosotros, su pedido de ".trim($_POST['nom-producto'])." esta siendo procesado. En breve nos estaremos contactando con usted via telefono...", "De: " . $to . " <" . $to . ">\r\n", "FOODSTORE");
             }
         } else {
             $res['status'] = 500;
@@ -54,9 +54,9 @@ function guardarorders()
             $result = $wpdb->update($table, $data, array('subcription_email' => $correo));
             if ($result) {
                 $res['status'] = 200;
-                //wp_mail($to, $subject, $message, $headers);
+                wp_mail($to, $subject, $message, $headers);
                 //enviar msn al cliente
-                //wp_mail($_POST['correoorder']," Sr(a). ".trim($_POST['nombreorder'])." ". trim($_POST['apellidosorder']) . " Se contacto con FOODSTORE", "Muchas gracias por confiar en nosotros, su pedido de ".trim($_POST['nom-producto'])." esta siendo procesado. En breve nos estaremos contactando con usted via telefono...", "De: " . $to . " <" . $to . ">\r\n", "FOODSTORE");
+                wp_mail($_POST['correoorder']," Sr(a). ".trim($_POST['nombreorder'])." ". trim($_POST['apellidosorder']) . " Se contacto con FOODSTORE", "Muchas gracias por confiar en nosotros, su pedido de ".trim($_POST['nom-producto'])." esta siendo procesado. En breve nos estaremos contactando con usted via telefono...", "De: " . $to . " <" . $to . ">\r\n", "FOODSTORE");
             } else {
                 $res['status'] = 500;
                 $res['value'] = 'error';
@@ -71,9 +71,9 @@ function guardarorders()
             $result = $wpdb->insert($table, $data);
             if ($result) {
                 $res['status'] = 200;
-                //wp_mail($to, $subject, $message, $headers);
+                wp_mail($to, $subject, $message, $headers);
                 //enviar msn al cliente
-                //wp_mail($_POST['correoorder']," Sr(a). ".trim($_POST['nombreorder'])." ".trim($_POST['apellidosorder']). " Se contacto con FOODSTORE", "Muchas gracias por confiar en nosotros, su pedido de ".trim($_POST['nom-producto'])." esta siendo procesado. En breve nos estaremos contactando con usted via telefono...", "De: " . $to . " <" . $to . ">\r\n", "FOODSTORE");
+                wp_mail($_POST['correoorder']," Sr(a). ".trim($_POST['nombreorder'])." ".trim($_POST['apellidosorder']). " Se contacto con FOODSTORE", "Muchas gracias por confiar en nosotros, su pedido de ".trim($_POST['nom-producto'])." esta siendo procesado. En breve nos estaremos contactando con usted via telefono...", "De: " . $to . " <" . $to . ">\r\n", "FOODSTORE");
             } else {
                 $res['status'] = 500;
                 $res['value'] = 'error';
