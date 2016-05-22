@@ -1,15 +1,14 @@
 # Created by .ignore support plugin (hsz.mobi)
 ### Example user template template
-/wordpress/.htaccess
-/wordpress/wp-config.php
+wordpress/.htaccess
 ### Example user template
 
 # IntelliJ project files
 
-.idea/*
+.idea/
 .DS_Store
-/wordpress/wp-config.php
-/wordpress/wp-content/uploads/
+wordpress/wp-config.php
+wordpress/wp-content/uploads
 .htaccess
 *.iml
 out
