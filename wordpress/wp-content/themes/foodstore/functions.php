@@ -15,10 +15,12 @@ the_post_thumbnail(array(100, 100));  // Other resolutions
 require get_template_directory() . '/inc/include/information_web.php';
 //crear la tabla de contactos
 require get_template_directory() . '/inc/include/savecontact.php';
-//crear tabla de subscripciones 
+//crear tabla de subscripciones
 require get_template_directory() . '/inc/include/savesubscription.php';
 //guardar ordenes
 require get_template_directory() . '/inc/include/saveorders.php';
+//eliminar suscripciones
+require get_template_directory() . '/inc/include/deletesuscriptions.php';
 
 //post mas populares
 function getPostViews($postID)
@@ -45,9 +47,7 @@ function setPostViews($postID)
         $count++;
         update_post_meta($postID, $count_key, $count);
     }
-}
-
-
+} 
 
 function ts_post_type_informacion()
 {
@@ -64,7 +64,7 @@ function ts_post_type_informacion()
             'exclude_from_search' => true,
             'rewrite' => array('slug' => 'informaciones'),
             'supports' => array(
-                'title', 
+                'title',
                 'template',
                 'editor',
                 'thumbnail')
@@ -80,4 +80,3 @@ function ts_post_type_informacion()
 }
 
 add_action('init', 'ts_post_type_informacion');
- 

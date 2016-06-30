@@ -24,6 +24,16 @@
                                 <span class="iconbox button"><i class="fa fa-envelope-o">&nbsp;</i></span>
                                 <h4>Email: <?php echo get_option('mail'); ?></h4>
                             </li>
+                            <li>
+                            <a href="<?php echo get_option('social_fb'); ?>"> 
+                                <span class="iconbox button"><i class="fa fa-facebook">&nbsp;</i></span>
+                               <h4>Facebook</h4></a>
+                            </li>
+                            <li>
+                            <a href="<?php echo get_option('social_tw'); ?>"> 
+                                <span class="iconbox button"><i class="fa fa-twitter">&nbsp;</i></span>
+                               <h4>Twitter</h4></a>
+                            </li>
                         </ul>
                     </div>
                 </div>

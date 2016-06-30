@@ -1,8 +1,8 @@
 <div class="colum-left">
-	<div class="banner0"> 
+	<div class="banner0">
 	<div class="marco-imagen">
 		<div id="imagen-left" style="background-image: url('<?php echo get_template_directory_uri(); ?>/img/banners/banner-sidebar-272x249.jpg');"></div>
-	</div> 					 
+	</div>
 	</div>
 	<div class="menu-testimonial">
 		<div class="caja-contenedor">
@@ -19,7 +19,7 @@
 					</div>
 					</a>
 					<div class="profile">
-						<p><br></p>					
+						<p><br></p>
 					</div>
 				</div>
 				</li>
@@ -31,11 +31,11 @@
 					<a href="<?php echo esc_url( get_permalink( get_page_by_title('bebidas'))); ?>">
 					<div class="testimonio">
 						<h4 >Bebidas</h4>
-						<p>Bebidas recomendadas por la casa</p> 
+						<p>Bebidas recomendadas por la casa</p>
 					</div>
 					</a>
 					<div class="profile">
-						<p><br></p>					
+						<p><br></p>
 					</div>
 				</div>
 				</li>
@@ -46,10 +46,10 @@
 				<div class="medio-body">
 					<div class="testimonio">
 						<h4 >Equipo</h4>
-						<p>Conoce nuestro equipo</p> 
+						<p>Conoce nuestro equipo</p>
 					</div>
 					<div class="profile">
-						<p><br></p>					
+						<p><br></p>
 					</div>
 				</div>
 				</li>
@@ -60,10 +60,10 @@
 				<div class="medio-body">
 					<div class="testimonio">
 						<h4 >Ubicacion</h4>
-						<p>Ubicanos en el mapa</p> 
+						<p>Ubicanos en el mapa</p>
 					</div>
 					<div class="profile">
-						<p><br></p>					
+						<p><br></p>
 					</div>
 				</div>
 				</li>
@@ -138,12 +138,11 @@
 							endwhile;
 							wp_reset_postdata();
 							?>
-						</article> 						
-
+						</article>
 			 		</div>
 			 	</div>
 			 	<div class="col-xs-12 col-ms-6 col-md-3 col-lg-3"> </div>
 			 </div>
 		</div>
 	</div>
-</div>	
+</div>

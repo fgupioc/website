@@ -21,118 +21,39 @@
                                 <div class="decor-info"></div>
                             </div>
                             <div class="info-body">
-                                <div class="col-xs-2 col-sm-3 col-md-3">
-                                    <div class="marco-contennido-main">
-                                        <a href="">
-                                            <div class="imagenes-main" style="background-image: url('<?php echo get_template_directory_uri(); ?>/img/demo/product/img-produce05.jpg');">
+                                <article>
+                                    <?php $args = array(
+                                        'posts_per_page' => 12,
+                                        'cat' => 23,
+                                        'tag__in' => array(7,8,20)
+                                    ); ?>
+                                    <?php $the_query = new WP_Query($args); ?>
+                                    <?php while ($the_query->have_posts()) : $the_query->the_post();
+                                        $img_url = wp_get_attachment_url(get_post_thumbnail_id($post->ID));
+                                        ?>
+                                        <div class="col-xs-6 col-sm-4 col-md-3">
+                                            <div class="marco-contennido-main">
+                                                <!--	<?php//como extrar los datos de la tabla
+                                                $custom_fields = get_post_custom();
+                                                $valor = $custom_fields['precio_actual'];
+                                                ?>-->
+                                                <a href="<?php the_permalink(); ?>">
+                                                    <div class="imagenes-main" style="background-image: url('<?php echo $img_url; ?>');">
+                                                    </div>
+                                                    <div class="producto-meta-main">
+                                                        <h3><?php the_title(); ?></h3>
+                                                    </div>
+                                                </a>
+                                                <div class="precio-main">
+                                                    <span class="precio-new-main">$/<?php echo get_post_meta( $post->ID, 'precio_actual', true ) ?></span>
+                                                </div>
                                             </div>
-                                            <div class="producto-meta-main">
-                                                <h3>donec tellus</h3>
-                                            </div>
-                                        </a>
-                                        <div class="precio-main">
-                                            <span class="precio-new-main">$110.00</span>
                                         </div>
-                                    </div>
-                                </div>
-                                <div class="col-xs-2 col-sm-3 col-md-3">
-                                    <div class="marco-contennido-main">
-                                        <a href="">
-                                            <div class="imagenes-main" style="background-image: url('<?php echo get_template_directory_uri(); ?>/img/demo/product/img-produce06.jpg');">
-                                            </div>
-                                            <div class="producto-meta-main">
-                                                <h3>donec tellus</h3>
-                                            </div>
-                                        </a>
-                                        <div class="precio-main">
-                                            <span class="precio-new-main">$110.00</span>
-                                        </div>
-                                    </div>
-                                </div>
-                                <div class="col-xs-2 col-sm-3 col-md-3">
-                                    <div class="marco-contennido-main">
-                                        <a href="">
-                                            <div class="imagenes-main" style="background-image: url('<?php echo get_template_directory_uri(); ?>/img/demo/product/img-produce07.jpg');">
-                                            </div>
-                                            <div class="producto-meta-main">
-                                                <h3>donec tellus</h3>
-                                            </div>
-                                        </a>
-                                        <div class="precio-main">
-                                            <span class="precio-new-main">$110.00</span>
-                                        </div>
-                                    </div>
-                                </div>
-                                <div class="col-xs-2 col-sm-3 col-md-3">
-                                    <div class="marco-contennido-main">
-                                        <a href="">
-                                            <div class="imagenes-main" style="background-image: url('<?php echo get_template_directory_uri(); ?>/img/demo/product/img-produce08.jpg');">
-                                            </div>
-                                            <div class="producto-meta-main">
-                                                <h3>donec tellus</h3>
-                                            </div>
-                                        </a>
-                                        <div class="precio-main">
-                                            <span class="precio-new-main">$110.00</span>
-                                        </div>
-                                    </div>
-                                </div>
-                                <div class="col-xs-2 col-sm-3 col-md-3">
-                                    <div class="marco-contennido-main">
-                                        <a href="">
-                                            <div class="imagenes-main" style="background-image: url('<?php echo get_template_directory_uri(); ?>/img/demo/product/img-produce05.jpg');">
-                                            </div>
-                                            <div class="producto-meta-main">
-                                                <h3>donec tellus</h3>
-                                            </div>
-                                        </a>
-                                        <div class="precio-main">
-                                            <span class="precio-new-main">$110.00</span>
-                                        </div>
-                                    </div>
-                                </div>
-                                <div class="col-xs-2 col-sm-3 col-md-3">
-                                    <div class="marco-contennido-main">
-                                        <a href="">
-                                            <div class="imagenes-main" style="background-image: url('<?php echo get_template_directory_uri(); ?>/img/demo/product/img-produce06.jpg');">
-                                            </div>
-                                            <div class="producto-meta-main">
-                                                <h3>donec tellus</h3>
-                                            </div>
-                                        </a>
-                                        <div class="precio-main">
-                                            <span class="precio-new-main">$110.00</span>
-                                        </div>
-                                    </div>
-                                </div>
-                                <div class="col-xs-2 col-sm-3 col-md-3">
-                                    <div class="marco-contennido-main">
-                                        <a href="">
-                                            <div class="imagenes-main" style="background-image: url('<?php echo get_template_directory_uri(); ?>/img/demo/product/img-produce07.jpg');">
-                                            </div>
-                                            <div class="producto-meta-main">
-                                                <h3>donec tellus</h3>
-                                            </div>
-                                        </a>
-                                        <div class="precio-main">
-                                            <span class="precio-new-main">$110.00</span>
-                                        </div>
-                                    </div>
-                                </div>
-                                <div class="col-xs-2 col-sm-3 col-md-3">
-                                    <div class="marco-contennido-main">
-                                        <a href="">
-                                            <div class="imagenes-main" style="background-image: url('<?php echo get_template_directory_uri(); ?>/img/demo/product/img-produce08.jpg');">
-                                            </div>
-                                            <div class="producto-meta-main">
-                                                <h3>donec tellus</h3>
-                                            </div>
-                                        </a>
-                                        <div class="precio-main">
-                                            <span class="precio-new-main">$110.00</span>
-                                        </div>
-                                    </div>
-                                </div>
+                                        <?php
+                                    endwhile;
+                                    wp_reset_postdata();
+                                    ?>
+                                </article>
                             </div>
                         </div>
                     </div>
@@ -161,174 +82,39 @@
                                 <div class="decor-info"></div>
                             </div>
                             <div class="info-body">
-                                <div class="col-xs-2 col-sm-3 col-md-3">
-                                    <div class="marco-contennido-main">
-                                        <a href="">
-                                            <div class="imagenes-main" style="background-image: url('<?php echo get_template_directory_uri(); ?>/img/demo/product/img-produce09.jpg');">
+                                <article>
+                                    <?php $args = array(
+                                        'posts_per_page' => 12,
+                                        'cat' => 23,
+                                        'tag__in' => array(7,8)
+                                    ); ?>
+                                    <?php $the_query = new WP_Query($args); ?>
+                                    <?php while ($the_query->have_posts()) : $the_query->the_post();
+                                        $img_url = wp_get_attachment_url(get_post_thumbnail_id($post->ID));
+                                        ?>
+                                        <div class="col-xs-6 col-sm-4 col-md-3">
+                                            <div class="marco-contennido-main">
+                                                <!--	<?php//como extrar los datos de la tabla
+                                                $custom_fields = get_post_custom();
+                                                $valor = $custom_fields['precio_actual'];
+                                                ?>-->
+                                                <a href="<?php the_permalink(); ?>">
+                                                    <div class="imagenes-main" style="background-image: url('<?php echo $img_url; ?>');">
+                                                    </div>
+                                                    <div class="producto-meta-main">
+                                                        <h3><?php the_title(); ?></h3>
+                                                    </div>
+                                                </a>
+                                                <div class="precio-main">
+                                                    <span class="precio-new-main">$/<?php echo get_post_meta( $post->ID, 'precio_actual', true ) ?></span>
+                                                </div>
                                             </div>
-                                            <div class="producto-meta-main">
-                                                <h3>donec tellus</h3>
-                                            </div>
-                                        </a>
-                                        <div class="precio-main">
-                                            <span class="precio-new-main">$110.00</span>
                                         </div>
-                                    </div>
-                                </div>
-                                <div class="col-xs-2 col-sm-3 col-md-3">
-                                    <div class="marco-contennido-main">
-                                        <a href="">
-                                            <div class="imagenes-main" style="background-image: url('<?php echo get_template_directory_uri(); ?>/img/demo/product/img-produce10.jpg');">
-                                            </div>
-                                            <div class="producto-meta-main">
-                                                <h3>donec tellus</h3>
-                                            </div>
-                                        </a>
-                                        <div class="precio-main">
-                                            <span class="precio-new-main">$110.00</span>
-                                        </div>
-                                    </div>
-                                </div>
-                                <div class="col-xs-2 col-sm-3 col-md-3">
-                                    <div class="marco-contennido-main">
-                                        <a href="">
-                                            <div class="imagenes-main" style="background-image: url('<?php echo get_template_directory_uri(); ?>/img/demo/product/img-produce11.jpg');">
-                                            </div>
-                                            <div class="producto-meta-main">
-                                                <h3>donec tellus</h3>
-                                            </div>
-                                        </a>
-                                        <div class="precio-main">
-                                            <span class="precio-new-main">$110.00</span>
-                                        </div>
-                                    </div>
-                                </div>
-                                <div class="col-xs-2 col-sm-3 col-md-3">
-                                    <div class="marco-contennido-main">
-                                        <a href="">
-                                            <div class="imagenes-main" style="background-image: url('<?php echo get_template_directory_uri(); ?>/img/demo/product/img-produce12.jpg');">
-                                            </div>
-                                            <div class="producto-meta-main">
-                                                <h3>donec tellus</h3>
-                                            </div>
-                                        </a>
-                                        <div class="precio-main">
-                                            <span class="precio-new-main">$110.00</span>
-                                        </div>
-                                    </div>
-                                </div>
-                                <div class="col-xs-2 col-sm-3 col-md-3">
-                                    <div class="marco-contennido-main">
-                                        <a href="">
-                                            <div class="imagenes-main" style="background-image: url('<?php echo get_template_directory_uri(); ?>/img/demo/product/img-produce09.jpg');">
-                                            </div>
-                                            <div class="producto-meta-main">
-                                                <h3>donec tellus</h3>
-                                            </div>
-                                        </a>
-                                        <div class="precio-main">
-                                            <span class="precio-new-main">$110.00</span>
-                                        </div>
-                                    </div>
-                                </div>
-                                <div class="col-xs-2 col-sm-3 col-md-3">
-                                    <div class="marco-contennido-main">
-                                        <a href="">
-                                            <div class="imagenes-main" style="background-image: url('<?php echo get_template_directory_uri(); ?>/img/demo/product/img-produce10.jpg');">
-                                            </div>
-                                            <div class="producto-meta-main">
-                                                <h3>donec tellus</h3>
-                                            </div>
-                                        </a>
-                                        <div class="precio-main">
-                                            <span class="precio-new-main">$110.00</span>
-                                        </div>
-                                    </div>
-                                </div>
-                                <div class="col-xs-2 col-sm-3 col-md-3">
-                                    <div class="marco-contennido-main">
-                                        <a href="">
-                                            <div class="imagenes-main" style="background-image: url('<?php echo get_template_directory_uri(); ?>/img/demo/product/img-produce11.jpg');">
-                                            </div>
-                                            <div class="producto-meta-main">
-                                                <h3>donec tellus</h3>
-                                            </div>
-                                        </a>
-                                        <div class="precio-main">
-                                            <span class="precio-new-main">$110.00</span>
-                                        </div>
-                                    </div>
-                                </div>
-                                <div class="col-xs-2 col-sm-3 col-md-3">
-                                    <div class="marco-contennido-main">
-                                        <a href="">
-                                            <div class="imagenes-main" style="background-image: url('<?php echo get_template_directory_uri(); ?>/img/demo/product/img-produce12.jpg');">
-                                            </div>
-                                            <div class="producto-meta-main">
-                                                <h3>donec tellus</h3>
-                                            </div>
-                                        </a>
-                                        <div class="precio-main">
-                                            <span class="precio-new-main">$110.00</span>
-                                        </div>
-                                    </div>
-                                </div>
-                                <div class="col-xs-2 col-sm-3 col-md-3">
-                                    <div class="marco-contennido-main">
-                                        <a href="">
-                                            <div class="imagenes-main" style="background-image: url('<?php echo get_template_directory_uri(); ?>/img/demo/product/img-produce09.jpg');">
-                                            </div>
-                                            <div class="producto-meta-main">
-                                                <h3>donec tellus</h3>
-                                            </div>
-                                        </a>
-                                        <div class="precio-main">
-                                            <span class="precio-new-main">$110.00</span>
-                                        </div>
-                                    </div>
-                                </div>
-                                <div class="col-xs-2 col-sm-3 col-md-3">
-                                    <div class="marco-contennido-main">
-                                        <a href="">
-                                            <div class="imagenes-main" style="background-image: url('<?php echo get_template_directory_uri(); ?>/img/demo/product/img-produce10.jpg');">
-                                            </div>
-                                            <div class="producto-meta-main">
-                                                <h3>donec tellus</h3>
-                                            </div>
-                                        </a>
-                                        <div class="precio-main">
-                                            <span class="precio-new-main">$110.00</span>
-                                        </div>
-                                    </div>
-                                </div>
-                                <div class="col-xs-2 col-sm-3 col-md-3">
-                                    <div class="marco-contennido-main">
-                                        <a href="">
-                                            <div class="imagenes-main" style="background-image: url('<?php echo get_template_directory_uri(); ?>/img/demo/product/img-produce11.jpg');">
-                                            </div>
-                                            <div class="producto-meta-main">
-                                                <h3>donec tellus</h3>
-                                            </div>
-                                        </a>
-                                        <div class="precio-main">
-                                            <span class="precio-new-main">$110.00</span>
-                                        </div>
-                                    </div>
-                                </div>
-                                <div class="col-xs-2 col-sm-3 col-md-3">
-                                    <div class="marco-contennido-main">
-                                        <a href="">
-                                            <div class="imagenes-main" style="background-image: url('<?php echo get_template_directory_uri(); ?>/img/demo/product/img-produce12.jpg');">
-                                            </div>
-                                            <div class="producto-meta-main">
-                                                <h3>donec tellus</h3>
-                                            </div>
-                                        </a>
-                                        <div class="precio-main">
-                                            <span class="precio-new-main">$110.00</span>
-                                        </div>
-                                    </div>
-                                </div>
+                                        <?php
+                                    endwhile;
+                                    wp_reset_postdata();
+                                    ?>
+                                </article>
                             </div>
                         </div>
                     </div>
